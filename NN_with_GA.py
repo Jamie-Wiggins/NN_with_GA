@@ -430,8 +430,7 @@ if __name__ == "__main__":
     surfacePlot('Q1_surfacePlot.png')
 
     # training and testing data plots
-    trainingData, testingData = generateData(1100) # Generate data for training and 
-    testing
+    trainingData, testingData = generateData(1100) # Generate data for training and testing
     scatterPlot('Q2_train_scatterPlot.png', trainingData, "blue", "training") 
     scatterPlot('Q2_test_scatterPlot.png', testingData, "red", "testing") 
 
@@ -464,8 +463,7 @@ if __name__ == "__main__":
     print(real[:5])
 
     numOfGenerations = 500 # set generation to run to 1000
-    genArr = np.asarray(list(range(1, numOfGenerations+1))) # list of gens 1 to 
-    numOfGenerations
+    genArr = np.asarray(list(range(1, numOfGenerations+1))) # list of gens 1 to numOfGenerations
 
     data = trainingData # set data to use to training
     print("=========================================== Lamarckian approach -Training Data ==============================================")
@@ -491,10 +489,8 @@ if __name__ == "__main__":
     main(2, 'testing') # run GA for Baldwinian approach
     neuralNetwork3DSurfacePlot('Q9_test_surfacePlot.png') # plot 3D surface plot after testing data
 
-    lamTest = np.load('lamarckian_test.npy') # load best array for Lamarckian 
-    approach
-    baldTest = np.load('baldwinian_test.npy') # load best array for Baldwinian 
-    approach
+    lamTest = np.load('lamarckian_test.npy') # load best array for Lamarckian approach
+    baldTest = np.load('baldwinian_test.npy') # load best array for Baldwinian approach
 
     plotComparison('Q8_test_genPlot.png', lamTest, baldTest) # plot comparison of approaches for testing data
     plotFitnessAcrossGen('Q8_plotFitnessAcrossGen_test_L.png', lamTest) # plot fitness across gens for testing data Lamarckian approach
